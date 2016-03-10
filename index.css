@@ -1,0 +1,1325 @@
+/*
+* @Author: Administrator
+* @Date:   2016-02-02 01:57:50
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-02-03 02:52:00
+*/
+
+@charset "UTF-8";
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+table,
+tbody,
+p,
+th,
+td,
+em {
+  -webkit-text-size-adjust: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: 12px;
+  font-family: "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+input,
+button,
+a,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  resize: none;
+  border: none;
+  outline: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+i,
+b,
+em {
+  font-size: 100%;
+  word-wrap: break-word;
+  font-weight: normal;
+  font-style: normal;
+}
+
+a:active,
+a:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+
+
+/* 修正IE6振动bug */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bg-color {
+  background: #ff6900;
+}
+
+.private-bg {
+  background: #f4f4f4;
+}
+
+.w {
+  width: 960px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.wrap {
+  position: relative;
+}
+
+
+/* header */
+
+.header {
+  width: 100%;
+  height: 89px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(images/nav-b.png) repeat-x;
+  z-index: 50;
+}
+
+.logo {
+  display: block;
+  width: 270px;
+  height: 51px;
+  margin: 19px 232px 19px 0;
+  float: left;
+  z-index: 3;
+}
+
+.nav a {
+  float: left;
+  display: block;
+  width: 96px;
+  height: 88px;
+  text-align: center;
+  line-height: 88px;
+  position: relative;
+}
+
+.nav a.inter {
+  width: 170px;
+}
+
+.nav a em {
+  color: #f4f4f4;
+  position: relative;
+  font-size: 18px;
+  z-index: 4;
+}
+
+.nav a i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.nav a:hover em {
+  color: #fff;
+}
+
+.nav a:hover i {
+  background-color: rgba(0, 0, 0, .1);
+  animation: navhover 0.2s linear 0s normal none;
+  -webkit-animation: navhover 0.2s linear 0s normal none;
+}
+
+
+/* 导航栏hover动画 */
+
+@keyframes navhover {
+  0% {
+    transform: scale(0, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes navhover {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0, 1);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+
+/* header end */
+
+
+/* 轮播图 */
+
+.slide {
+  width: 100%;
+  height: 580px;
+  position: relative;
+}
+
+
+/* 第一章巴士轮播图 */
+
+.lunboone {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #FFC600 url(images/lbbus-bgimg-footer.png) repeat-x left bottom;
+}
+
+.bus {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(images/lbbus-bgimg.png) no-repeat center top;
+}
+
+.bus1 {
+  position: absolute;
+  top: 240px;
+  left: 50%;
+  margin-left: -360px;
+  width: 721px;
+  height: 123px;
+
+}
+.banAnimate .bus1 {
+  animation: busone 0.5s linear 0s normal none;
+  -webkit-animation: busone 0.5s linear 0s normal none;
+}
+
+.bus2 {
+  position: absolute;
+  top: 375px;
+  left: 680px;
+  width: 319px;
+  height: 64px;
+}
+.banAnimate .bus2 {
+  animation: bustwo 1s cubic-bezier(0, 1.19, .99, .99) normal none;
+  -webkit-animation: bustwo 1s cubic-bezier(0, 1.19, .99, .99) normal none;
+}
+
+.bus3 {
+  position: absolute;
+  width: 461px;
+  height: 161px;
+  top: 385px;
+  left: 200px;
+}
+.banAnimate .bus3{
+  animation: busthree 1s cubic-bezier(0, 1.19, .99, .99) 0s normal none;
+  -webkit-animation: busthree 1s cubic-bezier(0, 1.19, .99, .99) 0s normal none;
+}
+
+.bus4 {
+  position: absolute;
+  width: 198px;
+  height: 66px;
+  top: 460px;
+  left: 810px;
+}
+.banAnimate .bus4 {
+  animation: busfore 0.6s linear 0s normal none;
+  -webkit-animation: busfore 0.6s linear 0s normal none;
+}
+
+
+/* 第一张巴士轮播动画 */
+
+
+/* 标题动画 */
+
+@keyframes busone {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes busone {
+  from {
+    -webkit-transform: scale(0, 0);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+
+/* 回家动画 */
+
+@keyframes bustwo {
+  from {
+    left: 960px;
+  }
+  to {
+    left: 680px;
+  }
+}
+
+@-webkit-keyframes bustwo {
+  from {
+    left: 960px;
+  }
+  to {
+    left: 680px;
+  }
+}
+
+
+/* 巴士车动画 */
+
+@keyframes busthree {
+  from {
+    left: 0;
+  }
+  to {
+    left: 200px;
+  }
+}
+
+@-webkit-keyframes busthree {
+  from {
+    left: -500px;
+  }
+  to {
+    left: 200px;
+  }
+}
+
+
+/* 按钮动画 */
+
+@keyframes busfore {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes busfore {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* 第二章巴士轮播图 */
+
+.lunbotwo {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #d01933;
+}
+
+.ticket1 {
+  display: none;
+  position: absolute;
+  top: 112px;
+  left: 50%;
+  margin-left: -334px;
+  width: 668px;
+  height: 356px;
+  z-index: 1;
+}
+.banAnimate .ticket1 {
+  display: block;
+  animation: ticketone 0.5s linear;
+  -webkit-animation: ticketone 0.5s linear;
+}
+
+.ticket2 {
+  display: none;
+  position: absolute;
+  width: 583px;
+  height: 114px;
+  top: 333px;
+  left: 50%;
+  margin-left: -292px;
+}
+.banAnimate .ticket2 {
+  display: block;
+  animation: tickettwo 0.8s linear;
+  -webkit-animation: tickettwo 0.8s linear;
+}
+.ticket3 {
+  display: none;
+  position: absolute;
+  width: 160px;
+  height: 43px;
+  line-height: 43px;
+  margin-left: -80px;
+  left: 50%;
+  top: 490px;
+  background: url(images/2015-lb-qp-btn.png) no-repeat left top;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+
+}
+.banAnimate .ticket3 {
+  display: block;
+  animation: ticketthree 0.8s linear;
+  -webkit-animation: ticketthree 0.8s linear;
+}
+
+
+/* 第二章小熊动画 */
+
+@keyframes ticketone {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes ticketone {
+  from {
+    -webkit-transform: scale(0, 0);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+
+/* 第二章火车动画 */
+
+@keyframes tickettwo {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes tickettwo {
+  from {
+    -webkit-transform: scale(0, 0);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+
+/* 第二章按钮动画 */
+
+@keyframes ticketthree {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes ticketthree {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* 第三张包米轮播图 */
+
+.lunbothree {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+}
+
+.baomi1 {
+  display: none;
+  width: 960px;
+  height: 550px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -400px;
+}
+.banAnimate .baomi1 {
+  display: block;
+  animation: jinghuaqi 0.6s linear;
+  -webkit-animation: jinghuaqi 0.6s linear;
+}
+
+.baomi2 {
+  display: none;
+  position: absolute;
+  width: 288px;
+  height: 204px;
+  margin-left: -460px;
+  top: 293px;
+  left: 50%;
+}
+.banAnimate .baomi2 {
+  display: block;
+  animation: wenzi 0.6s linear;
+  -webkit-animation: wenzi 0.6s linear;
+}
+
+
+/* 第三张轮播图机器动画 */
+
+@keyframes jinghuaqi {
+  from {
+    opacity: 0;
+    left: 53%;
+  }
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+@-webkit-keyframes jinghuaqi {
+  from {
+    opacity: 0;
+    left: 53%;
+  }
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+
+/* 第三张轮播图文字动画 */
+
+@keyframes wenzi {
+  from {
+    opacity: 0;
+    left: 47%;
+  }
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+@-webkit-keyframes wenzi {
+  from {
+    opacity: 0;
+    left: 47%;
+  }
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+
+/* 第四章轮播图 */
+
+.lunbofore {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ff6900;
+}
+
+.liebao1 {
+  display: none;
+  position: absolute;
+  width: 952px;
+  height: 352px;
+  top: 100px;
+  margin-left: -476px;
+  left: 50%;
+}
+.banAnimate .liebao1 {
+  display: block;
+  animation: liebao 0.5s linear;
+  -webkit-animation: liebao 0.5s linear;
+}
+.liebao2 {
+  position: absolute;
+  left: 50%;
+  top: 406px;
+  width: 952px;
+  margin-left: -476px;
+  height: 100px;
+  text-align: center;
+}
+.banAnimate .liebao2 {
+  display: block;
+  animation: liebaoS 0.5s linear;
+  -webkit-animation: liebaoS 0.5s linear;
+}
+
+
+/* 第四张轮播图豹子动画 */
+
+@keyframes liebao {
+  from {
+    opacity: 0;
+    left: 60%;
+  }
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+@-webkit-keyframes liebao {
+  from {
+    opacity: 0;
+    left: 60%;
+  }
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+
+/* 第四张轮播图文字动画 */
+
+@keyframes liebaoS {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes liebaoS {
+  from {
+    -webkit-transform: scale(0, 0);
+  }
+  to {
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+
+/* 第五章轮播图 */
+
+.lunbofive {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #193d85;
+}
+
+.damao1 {
+  display: none;
+  position: absolute;
+  left: 50%;
+  height: 582px;
+  width: 668px;
+  top: 0;
+  margin-left: -540px;
+}
+.banAnimate .damao1 {
+  display: block;
+  animation: damao 0.5s linear;
+  -webkit-animation: damao 0.5s linear;
+}
+
+.damao2 {
+  display: none;
+  position: absolute;
+  top: 228px;
+  height: 164px;
+  left: 50%;
+}
+.banAnimate .damao2 {
+  display: block;
+  animation: damaoW 0.5s linear;
+  -webkit-animation: damaoW 0.5s linear;
+}
+
+.damao2 p {
+  padding-top: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+
+
+/* 第五章轮播图 大猫动画 */
+
+@keyframes damao {
+  from {
+    opacity: 0;
+    left: 47%;
+  }
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+@-webkit-keyframes damao {
+  from {
+    opacity: 0;
+    left: 47%;
+  }
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+@keyframes damaoW {
+  from {
+    opacity: 0;
+    left: 53%;
+  }
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+@-webkit-keyframes damaoW {
+  from {
+    opacity: 0;
+    left: 53%;
+  }
+  to {
+    opacity: 1;
+    left: 50%;
+  }
+}
+
+/* 轮播图完 */
+
+/* 移动pc */
+.pcyd {
+  height: 296px;
+  border-bottom: 1px solid #ebebeb;
+  background: #f8f8f8;
+}
+.pc,.yd,.bm{
+  width: 33.333333%;
+  height: 296px;
+  float: left;
+}
+.pc a,.yd a,.bm a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+.pc a span,.yd a span,.bm a span {
+  display: block;
+  position: absolute;
+  top: 58px;
+  left: 84px;
+  width: 152px;
+  height: 124px;
+  background: url(images/icon-24.png) no-repeat left -128px;
+}
+.yd a span {
+  background: url(images/icon-24.png) no-repeat -300px -128px;
+}
+.bm a span {
+  background: url(images/icon-24.png) no-repeat -604px -128px;
+}
+.pc a h3,.yd a h3,.bm a h3 {
+  position: absolute;
+  bottom: 72px;
+  font-size: 18px;
+  color: #ff6900;
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  left: 0;
+  text-align: center;
+}
+.pc a p,.yd a p,.bm a p {
+  bottom: 46px;
+  color: #333;
+  width: 100%;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  position: absolute;
+}
+.pc a:hover span {
+  background: url(images/icon-24.png) no-repeat left top;
+}
+.yd a:hover span {
+  background: url(images/icon-24.png) no-repeat -300px top;
+}
+.yd a div,.pc a div,.bm a div{
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  margin-left: -82px;
+  width: 164px;
+  height: 165px;
+  background:url(images/radius-24.png) no-repeat;
+  display: none;
+}
+.yd a:hover div,.pc a:hover div,.bm a:hover div {
+  display: block;
+  animation: radius 0.4s linear;
+  -webkit-animation: radius 0.4s linear;
+}
+@keyframes radius {
+  from {
+    transform:scale(0);
+  }
+  to{
+    transform:scale(1);
+  }
+}
+@-webkit-keyframes radius {
+  from {
+    -webkit-transform:scale(0,0);
+  }
+  to{
+    -webkit-transform:scale(1,1);
+  }
+}
+
+/*新闻区域*/
+.news {
+  width: 960px;
+  margin: 0 auto;
+  padding: 50px 0 30px;
+}
+.news h2 {
+  font-size: 20px;
+  color: #FF6900;
+}
+.newsone,.newstwo,.newsthree {
+  width: 960px;
+  height: 160px;
+  padding: 25px 0;
+  position: relative;
+}
+.newsimg {
+  float: left;
+  overflow: hidden;
+}
+.newsimg:hover img{
+  animation: fangdajing 0.5s linear;
+  -webkit-animation: fangdajing 0.5s linear;
+  transform: scale(1.2,1.2);
+  -webkit-transform: scale(1.2,1.2);
+}
+.newsinfo {
+  margin-left: 334px;
+}
+.news h3{
+  height: 24px;
+  line-height: 24px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.news h3:hover {
+  color: #FF6900;
+}
+.newsinfo span {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  color: #666;
+}
+.newsinfo span .time {
+  display: inline-block;
+  padding-right: 30px;
+}
+.newsinfo span .fenxiang {
+  display: inline-block;
+  padding-right: 8px;
+}
+.newsinfo span .xinlang {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(images/jingling.png) no-repeat ;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-position: 2px -147px;
+}
+.newsinfo span .xinlang:hover {
+  animation: xinlangscroll 0.2s linear;
+  -webkit-animation: xinlangscroll 0.2s linear;
+  background-position: 2px -174px;
+}
+@keyframes xinlangscroll {
+  from {
+    background-position: 2px -147px;
+  }
+  to {
+    background-position: 2px -174px;
+  }
+}
+@-webkit-keyframes xinlangscroll {
+  from {
+    background-position: 2px -147px;
+  }
+  to {
+    background-position: 2px -174px;
+  }
+}
+.newsinfo span .tengxun {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(images/jingling.png) no-repeat ;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-position: -37px -147px;
+}
+.newsinfo span .tengxun:hover {
+  animation: tengxunscroll 0.2s linear;
+  -webkit-animation: tengxunscroll 0.2s linear;
+  background-position: -37px -174px;
+}
+@keyframes tengxunscroll {
+  from {
+    background-position: -37px -147px;
+  }
+  to {
+    background-position: -37px -174px;
+  }
+}
+@-webkit-keyframes tengxunscroll {
+  from {
+    background-position: -37px -147px;
+  }
+  to {
+    background-position: -37px -174px;
+  }
+}
+.newsinfo span .kongjian {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: url(images/jingling.png) no-repeat ;
+  vertical-align: middle;
+  margin-right: 10px;
+  background-position: -70px -147px;
+}
+.newsinfo span .kongjian:hover {
+  animation: kongjianscroll 0.2s linear;
+  -webkit-animation: kongjianscroll 0.2s linear;
+  background-position: -70px -174px;
+}
+@keyframes kongjianscroll {
+  from {
+    background-position: -70px -147px;
+  }
+  to {
+    background-position: -70px -174px;
+  }
+}
+@-webkit-keyframes kongjianscroll {
+  from {
+    background-position: -70px -147px;
+  }
+  to {
+    background-position: -70px -174px;
+  }
+}
+.newsinfo p {
+  color: #666;
+  cursor: pointer;
+  height: 72px;
+  line-height: 22px;
+}
+.xiangqing {
+  display: block;
+  width: 107px;
+  height: 35px;
+  line-height: 34px;
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  right: 0px;
+  background:url("images/jingling.png") no-repeat 0 -54px;
+  text-indent: 26px;
+  overflow: hidden;
+  cursor: pointer;
+  color: #FF6900;
+}
+.xiangqing:hover {
+  color: #ffffff;
+  background:url("images/jingling.png") no-repeat 0 -92px;
+}
+@keyframes fangdajing {
+  from {
+    transform: scale(1,1);
+  }
+  to {
+    transform: scale(1.2,1.2);
+  }
+}
+@-webkit-keyframes fangdajing {
+  from {
+    -webkit-transform: scale(1,1);
+  }
+  to {
+    -webkit-transform: scale(1.2,1.2);
+  }
+}
+/*新闻区域完*/
+
+/*论坛区域*/
+.forum {
+  width: 960px;
+  margin: 0px auto;
+  padding-bottom: 50px;
+  overflow: hidden;
+}
+.forum h2 {
+  font-size: 20px;
+  color: #FF6900;
+}
+.forum ul {
+  width: 960px;
+  padding-top: 15px;
+}
+.forum li {
+  width: 33.3333%;
+  height: 30px;
+  line-height: 30px;
+  float: left;
+  overflow: hidden;
+}
+.forum li a {
+  display: block;
+  padding: 0px 10px 0px 24px;
+  background: url("images/jingling.png") no-repeat 0 -219px;
+  color: #666;
+}
+.forum li a:hover {
+  color: #FF6900;
+}
+/*论坛区域完*/
+
+/*脚部区域*/
+.footer {
+  width: 100%;
+  height: 40px;
+  background: #464646;
+  overflow: hidden;
+}
+.barleft {
+  float: left;
+  width: 640px;
+  line-height: 40px;
+  text-align: left;
+  color: #C0C0C0;
+}
+.barleft a {
+  display: inline-block;
+  padding: 0px 10px;
+  color: #C0C0C0;
+}
+.barleft a:hover {
+  color: #f0f0f0;
+}
+.barright {
+  float: left;
+  width: 320px;
+  height: 40px;
+  color: #C0C0C0;
+}
+.barright span {
+  float: left;
+  line-height: 40px;
+  padding-right: 20px;
+}
+.fxinlang,.ftengxun,.fkongjian{
+  display: inline-block;
+  width: 28px;
+  height: 40px;
+  margin-right: 10px;
+  line-height: 40px;
+  background: url("images/jingling.png") no-repeat;
+}
+.fxinlang {
+  background-position: 2px -258px;
+}
+.ftengxun {
+  background-position: -40px -257px;
+}
+.fkongjian {
+  background-position: -77px -257px;
+}
+.fxinlang:hover {
+  animation:fxlscroll 0.2s linear;
+  -webkit-animation:fxlscroll 0.2s linear;
+  background-position: 2px -289px;
+}
+.ftengxun:hover {
+  animation: ftxscroll 0.2s linear;
+  -webkit-animation: ftxscroll 0.2s linear;
+  background-position: -40px -288px;
+}
+.fkongjian:hover {
+  animation: fkjscroll 0.2s linear;
+  -webkit-animation: fkjscroll 0.2s linear;
+  background-position: -77px -288px;
+}
+@keyframes fxlscroll {
+  from {
+    background-position: 2px -258px;
+  }
+  to {
+    background-position: 2px -289px;
+  }
+}
+@keyframes ftxscroll {
+  from {
+    background-position: -40px -257px;
+  }
+  to {
+    background-position: -40px -288px;
+  }
+}
+@keyframes fkjscroll {
+  from {
+    background-position: -77px -257px;
+  }
+  to {
+    background-position: -77px -288px;
+  }
+}
+@-webkit-keyframes fxlscroll {
+  from {
+    background-position: 2px -258px;
+  }
+  to {
+    background-position: 2px -289px;
+  }
+}
+@-webkit-keyframes ftxscroll {
+  from {
+    background-position: -40px -257px;
+  }
+  to {
+    background-position: -40px -288px;
+  }
+}
+@-webkit-keyframes fkjscroll {
+  from {
+    background-position: -77px -257px;
+  }
+  to {
+    background-position: -77px -288px;
+  }
+}
+/*微信区域*/
+.watch {
+  width: 80px;
+  position: fixed;
+  right: 40px;
+  bottom: 46px;
+  z-index: 99;
+}
+.watch a {
+  display: block;
+  width: 82px;
+  height: 39px;
+  background: url("images/jingling.png") no-repeat;
+  background-position: 0 -352px;
+}
+.watch a:hover {
+  background-position: -82px -352px;
+}
+.watch-img {
+  display: none;
+  width: 106px;
+  height: 142px;
+  padding: 11px;
+  background: url("images/wx-pop.png") no-repeat;
+  position: absolute;
+  z-index: 33;
+  top: -170px;
+  left: -24px;
+}
+.watch-img p {
+  display: block;
+  line-height: 28px;
+  text-align: center;
+  color: #464646;
+}
+.watch a:hover .watch-img {
+  display: block;
+  animation-name: scode;
+  -webkit-animation: scode 0.3s linear 0s normal none;
+  animation: scode 0.3s linear 0s normal none;
+}
+@keyframes scode {
+  from {
+    opacity: 0;
+    transform: scale(1, 0);
+    transform-origin: left bottom;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1, 1);
+    transform-origin: left bottom;
+  }
+}
+@-webkit-keyframes scode {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(1, 0);
+    transform-origin: left bottom;
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1, 1);
+    transform-origin: left bottom;
+  }
+}
+
+/*轮播图左右*/
+.prev, .next {
+  display: block;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  z-index: 222;
+  top: 267px;
+  opacity: 0.6;
+}
+.prev {
+  left: 70px;
+}
+.next {
+  right: 70px;
+}
+.prev:hover, .next:hover {
+  opacity: 1;
+}
+.item a {
+  display: inline-block;
+  width: 24px;
+  height: 5px;
+  margin-right: 11px;
+  background: #444;
+  opacity: 0.4;
+}
+.item {
+  width: 100%;
+  height: 5px;
+  position: absolute;
+  z-index: 124;
+  top: 550px;
+  left: 0;
+  text-align: center;
+}
+.item .current {
+  background-color: #fff;
+}
+.slided {
+  opacity: 0.5;
+  z-index: 0;
+}
+.banAnimate {
+  opacity: 1;
+  z-index: 8;
+}
